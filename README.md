@@ -1,3 +1,6 @@
+In this repository, you will find instructions to run QBittorrent, as server on linux. (Raspberry pi, in this instructions)
+This manual, will setup an autostart QBittorrent server on the raspberry. With auto-mount to NAS | NFS in the network.
+
 1. Install cifs to mount windows share storage (smb share - samba server):
   `sudo apt install cifs-utils`
 
@@ -14,3 +17,15 @@
 4. Autostart qbittorrent:
   Open `/etc/xdg/lxsession/LXDE-pi/autostart` with *nano* or *vim*, and put at the end of the file this line:
   `@qbittorrent`
+
+5. Enable the QBittorrent WebUI from the settings
+
+
+Instructions for adding a samba-server inside the Raspberry PI can be found below:
+
+Generally, this is not the best practice, it will add load to the Raspberry PI in case of high traffic.
+In case you still want to setup the storage for the torrent inside the Raspberry PI. use this instrcutions:
+
+1. Revet your changes to the `/etc/fstab` file
+2. Follow the [samba-server instructions](https://pimylifeup.com/raspberry-pi-samba)
+3. Set the save-destenation folder to the samba-share path
