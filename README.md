@@ -5,7 +5,9 @@
   Be sure that both `dest_dir_path` and `mount_destantion` are exists
   `//<ip or hostname>/<dest_dir_path> /<mount_dest> cifs guest,file_mode=0777,dir_mode=0777,noauto,x-systemd.automount,_netdev 0 0` 
   
-  Check the <mounting_dest> exists and mounted (try to put a file and change it remotely, check whether the file changed or not)
+  Check the `<mounting_dest>` exists and mounted (try to put a file and change it remotely, check whether the file changed or not)
+  
+  Example `fstab` file provided inside this repository
 
 3. Install qbittorrent:
   [Qbittorrent installation instructions](https://pimylifeup.com/raspberry-pi-qbittorrent)
