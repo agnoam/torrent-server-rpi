@@ -1,0 +1,14 @@
+proc            /proc           proc    defaults          0       0
+PARTUUID=48b78cdd-01  /boot           vfat    defaults          0       2
+PARTUUID=48b78cdd-02  /               ext4    defaults,noatime  0       1
+
+# Most of times the <path-inside-rpi>: will be probably inside the `/mnt` folder
+
+# Network-visible NAS | NFS
+# //<hostname>/<path-inside-nfs|cifs> <path-inside-rpi> cifs guest,file_mode=0777,dir_mode=0777,noauto,x-systemd.automount, _netdev 0 0
+
+# In case the first line not working you can try the following also
+# //<ip-address>/<path-inside-nfs|cifs> <path-inside-rpi> cifs guest,uid=0,gid=0,file_mode=0777,dir_mode=0777,noauto,x-systemd.automount,_netdev,vers=1.0 0 0
+
+# a swapfile is not a swap partition, no line here
+#   use  dphys-swapfile swap[on|off]  for that
