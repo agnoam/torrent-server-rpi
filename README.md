@@ -10,6 +10,8 @@ This manual, will setup an autostart QBittorrent server on the raspberry. With a
   <br/><br/>
   Check the `<mounting_dest>` exists and mounted (try to put a file and change it remotely, check whether the file changed or not)
   Example `fstab` file provided inside this repository.
+  
+  **Be advised: in case to command above not working, try to remove the `_netdev 0 0` and try again**
 
 3. Install qbittorrent:
   [Qbittorrent installation instructions](https://pimylifeup.com/raspberry-pi-qbittorrent)
